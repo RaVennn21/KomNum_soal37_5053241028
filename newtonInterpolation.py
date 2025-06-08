@@ -1,15 +1,3 @@
-## Komputasi Numerik_Soal37_5053241028
-
-
-### Anggota Kelompok R10
-    1. Muhammad Khalid Ash Shiddiqi 5053241030
-    2. Muhammad Zulfiqar 5053241006
-    3. Azmii Maulawiy Said 5053241024
-    4. Oktavian Ramadhan 5053241028
-    5. Jovan Oberto Mishael Sinaga 5053241031
-
-### Kode
-```python
 class NewtonInterpolation:
     def __init__(self, x, fx):
         self.x = x
@@ -60,23 +48,3 @@ newtonInterpolation = NewtonInterpolation(x, fx)
 result = newtonInterpolation.Calculate(target);
 
 print(f"{result: .2f}");
-```
-
-
-### Penjelasan Kode
-#### Interpolasi Newton Orde 3 
-
-##### 1. __FirstOrde, __SecondOrde, __ThirdOrde
-Ketiga fungsi ini berfungi untuk mengisi tabel selisih terbagi secara bertahap.
-
-- __FirstOrde menghitung selisih terbagi orde pertama.
-- __SecondOrde menghitung selisih terbagi orde kedua.
-- __ThirdOrde menghitung selisih terbagi orde ketiga.
-
-##### 2. Calculate(self, target_x) (Metode Utama)
-bagian ini adalah fungsi utama untuk mendapatkan hasil akhir.
-
-- Langkah 1: Memanggil fungsi __FirstOrde, __SecondOrde, dan __ThirdOrde secara berurutan untuk memastikan tabel selisih terbagi terisi penuh.
-- Langkah 2: Mengambil koefisien b0, b1, b2, b3 dari baris paling atas tabel selisih terbagi. Koefisien-koefisien ini adalah kunci dari polinomial Newton.
-- Langkah 3: Menghitung hasil akhir menggunakan rumus polinomial Newton: $$ result = b_0 + b_1(x - x_0) + b_2(x - x_0)(x - x_1) + b_3(x - x_0)(x - x_1)(x - x_2) $$
-- Langkah 4: Mengembalikan hasil perhitungan yang sudah dibulatkan.
